@@ -1,6 +1,6 @@
 spring:
   application:
-    name: aggregator-service
+    name: employee-aggregator-service
 
 eureka:
   client:
