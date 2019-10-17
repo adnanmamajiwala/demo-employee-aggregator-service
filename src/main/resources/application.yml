@@ -11,3 +11,14 @@ management:
   endpoint:
     service-registry:
       enabled: true
+
+server:
+  port: 8080
+
+---
+spring:
+  profiles:
+    active: prod
+
+server:
+  port: 9020
