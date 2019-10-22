@@ -2,23 +2,7 @@ spring:
   application:
     name: employee-aggregator-service
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:9000/eureka
-
 management:
   endpoint:
     service-registry:
       enabled: true
-
-server:
-  port: 8080
-
----
-spring:
-  profiles:
-    active: prod
-
-server:
-  port: 9020
