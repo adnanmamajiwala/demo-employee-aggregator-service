@@ -1,8 +1,12 @@
 spring:
   application:
-    name: employee-aggregator-service
+    name: employee-service
 
 management:
   endpoint:
     service-registry:
       enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: *
