@@ -31,13 +31,21 @@ public class EmployeeService {
     }
 
     public Employee save(Employee employee) {
-        Person savedPerson = personFeignClient.save(Person.builder().firstName(employee.getFirstName()).build());
+        Person savedPerson = personFeignClient.save(getPerson(employee));
         Address savedAddress = addressFeignClient.save(employee.getAddress());
         return Employee.builder()
                 .id(savedPerson.getId())
                 .firstName(savedPerson.getFirstName())
                 .lastName(savedPerson.getLastName())
                 .address(savedAddress)
+                .build();
+    }
+
+    private Person getPerson(Employee employee) {
+        return Person.builder()
+                .id(employee.getId())
+                .firstName(employee.getFirstName())
+                .lastName(employee.getLastName())
                 .build();
     }
 }

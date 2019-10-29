@@ -1,6 +1,9 @@
 spring:
   application:
     name: employee-service
+  output:
+    ansi:
+      enabled: always
 
 management:
   endpoint:
