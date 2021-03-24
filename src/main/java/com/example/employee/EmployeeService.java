@@ -22,6 +22,7 @@ public class EmployeeService {
     private final AddressFeignClient addressFeignClient;
 
     public List<Employee> findAll() {
+        log.debug("*********** find All Employees ************");
         List<Employee> employees = new ArrayList<>();
         List<Person> people = personFeignClient.getAllPeople();
         for (Person person : people) {
