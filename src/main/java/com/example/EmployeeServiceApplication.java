@@ -1,5 +1,6 @@
 package com.example;
 
+import feign.Retryer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -26,5 +27,10 @@ public class EmployeeServiceApplication {
                 .apis(RequestHandlerSelectors.basePackage("com.example"))
                 .paths(PathSelectors.any())
                 .build();
+    }
+
+    @Bean
+    public Retryer retryer() {
+        return new Retryer.Default();
     }
 }
