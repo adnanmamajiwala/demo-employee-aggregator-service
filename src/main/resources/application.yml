@@ -9,6 +9,11 @@ spring:
       discovery:
         include-not-ready-addresses: true
         all-namespaces: true
+      config:
+        name: default-name
+        namespace: default-namespace
+        sources:
+          - name: adnan-mama-dev
 
 management:
   endpoint:
