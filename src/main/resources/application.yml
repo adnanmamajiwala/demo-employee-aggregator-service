@@ -9,11 +9,6 @@ spring:
       discovery:
         include-not-ready-addresses: true
         all-namespaces: true
-      config:
-        name: employee-service
-        namespace: adnan-mama-dev
-        sources:
-          - name: adnan-mama-dev
 
 management:
   endpoint:
